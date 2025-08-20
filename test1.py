@@ -50,3 +50,4 @@ with open('./apps/mynewscript.py', 'w') as file:
     file.write(script)
 
 # Draw text to the framebuffer, then write the frambuffer to the display:
+quit()
