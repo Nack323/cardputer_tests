@@ -24,4 +24,4 @@ except Exception as e:
 info['todo'] = info['todo'].append('test1')
 info['done'] = info['done'].append('test2')
 
-write_todo(obj)
+write_todo(info)
