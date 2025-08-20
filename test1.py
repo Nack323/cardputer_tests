@@ -4,8 +4,8 @@ import json
 SD = sdcard.SDCard()
 SD.mount()
 info = {
-        'todo' : [],
-        'done' : []
+        'todo' : [''],
+        'done' : ['']
         }
 def write_todo(obj):
     with open('/sd/todo.json', 'w') as f:
@@ -21,7 +21,7 @@ except Exception as e:
 
 # add a couple of entries for testing
 
-info['todo'] = info['todo'].append('test1')
-info['done'] = info['done'].append('test2')
+info['todo'].append('test1')
+info['done'].append('test2')
 
 write_todo(info)
