@@ -14,9 +14,14 @@ def write_todo(obj):
 try:
     with open('/sd/todo.json', 'r') as f:
         info = json.load(f)
-except:
+except Exception as e:
     # if file does not exist, write a new one
     with open('/sd/todo.json', 'w') as f:
         json.dump(info, indent = 1)
 
+# add a couple of entries for testing
 
+info['todo'] = info['todo'].append('test1')
+info['done'] = info['done'].append('test2')
+
+write_todo(obj)
