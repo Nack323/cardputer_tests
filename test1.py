@@ -9,7 +9,7 @@ info = {
         }
 def write_todo(obj):
     with open('/sd/todo.json', 'w') as f:
-        json.dump(obj, indent = 1)
+        json.dump(obj)
 
 try:
     with open('/sd/todo.json', 'r') as f:
@@ -17,7 +17,7 @@ try:
 except Exception as e:
     # if file does not exist, write a new one
     with open('/sd/todo.json', 'w') as f:
-        json.dump(info, indent = 1)
+        json.dump(info)
 
 # add a couple of entries for testing
 
